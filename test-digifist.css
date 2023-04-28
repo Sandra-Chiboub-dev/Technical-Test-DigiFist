@@ -1,0 +1,143 @@
+body {
+  overflow-x: auto;
+  display: flex; 
+}
+
+.container {
+  display: flex;
+}
+
+/* Media query for screens larger than or equal to 720px */
+@media (min-width: 720px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .container > img {
+    width: 50%;
+  }
+}
+
+/* Media query for screens smaller than or equal to 360px */
+@media (max-width: 360px) {
+  .container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .container > img {
+    width: 100%!important;
+  }
+}
+
+  #underlinedText {
+    font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 12.8px;
+      line-height: 17px;
+      display: flex;
+      align-items: center;
+      text-transform: capitalize;
+      text-decoration: underline;
+      color: #000000;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #welcomeText {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 31.25px;
+    line-height: 130%;
+
+    display: flex;
+    align-items: flex-end;
+
+    color: #000000;
+  }
+
+  #subWelcomeText {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #666666;
+  }
+
+  @media (max-width: 360px) {
+    #welcomeText, #subWelcomeText{
+      color: white;
+    }
+  }
+  
+
+  .button-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+  }
+  
+  .custom-button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+  }
+
+  .product-list {
+    flex-direction: row;
+    white-space: nowrap;
+    overflow-x: scroll;
+    transition: transform 0.3s ease-in-out;
+    justify-content: space-between;
+  }
+
+  .product-list img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px;
+  }
+
+  @media (max-width: 720px) {
+    .product-list {
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .product-list img {
+      width: 45%;
+      margin-bottom: 10px;
+      margin-right: 0;
+    }
+  }
+  
+  .product-item {
+    display: inline-block;
+    width: 250px;
+    margin-right: 20px;
+    vertical-align: top;
+  }
+  
+  .product-price {
+    color: #888;
+  }
+  
+  .product-description {
+    color: #555;
+  }
